@@ -120,12 +120,8 @@
     }
 
     // support AMD and Node
-    if(typeof define === "function" && define.amd){
-        define(function(){
-            return sha1;
-        });
-    }else if(typeof exports !== 'undefined') {
-        if(typeof module !== 'undefined' && module.exports) {
+    if (typeof exports !== 'undefined') {
+        if (typeof module !== 'undefined' && module.exports) {
           exports = module.exports = sha1;
         }
         exports.sha1 = sha1;
